@@ -23,15 +23,14 @@ public class CreateMaintenanceRequest {
 	@JsonIgnore
 	private int id;
 	
-	//@NotNull //Null olamaz.
+	@NotNull
 	//@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
 	private LocalDate dateAdded;//bakıma giris tarihi
 	
-	//@NotNull
+	@NotNull
 	//@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
 	private LocalDate dateReturned;//bakımdan çıkıs tarihi
-	
-	//@NotNull
+
 	@Length(min=1,max=100)
 	private String description;//aciklama
 	

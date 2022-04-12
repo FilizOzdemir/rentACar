@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,7 +15,7 @@ public class UpdateColorRequest {
 
 	private int id;
 	
-	//@NotNull
+	@NotNull
 	@Length(min=2)
 	private String name;
 

@@ -32,7 +32,7 @@ public class Customer {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="national_id")//!!!
+    @Column(name="national_id")
     private String nationalId;
     
 
@@ -41,4 +41,7 @@ public class Customer {
     
     @OneToMany(mappedBy = "customer")//fatura tab ile ilişkilendirme
     private List<Invoice> invoices;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Payment> payments;
 }

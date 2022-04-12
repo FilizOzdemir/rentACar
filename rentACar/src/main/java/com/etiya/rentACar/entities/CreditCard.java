@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "creditCards") //kredi kartı tablosu
+@Table(name = "credit_cards") //kredi kartı tablosu
 public class CreditCard {
 
 	@Id
@@ -26,18 +26,18 @@ public class CreditCard {
 	@Column(name = "id") 
 	private int id;
 	
-	@Column(name ="creditCardNumber")// kredi kartı num
+	@Column(name ="credit_card_Number" ,length = 16)// kredi kartı num
 	private String creditCardNumber;
 	
-	@Column(name="firstName")
+	@Column(name="first_name")
 	private String firstName;
 
-    @Column(name="lastName")
+    @Column(name="last_name")
     private String lastName;
     
     @Column(name="cvv")//Kart Güvenlik Kodu
     private String cvv;
     
-    @Column(name="expirationDate")//Son Kullanma Tarihi
+    @Column(name="expiration_date")//Son Kullanma Tarihi
 	private String expirationDate;
 }

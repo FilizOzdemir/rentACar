@@ -50,6 +50,7 @@ public class AdditionalPropertiesController {
 
 	@GetMapping("/getall")
 	public DataResult<List<ListAdditionalPropertyDto>> getAll() {
+
 		return this.additionalPropertyService.getAll();
 	}
 }

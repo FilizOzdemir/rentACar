@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 public class UpdateCityRequest {
 
 	private int id;
-	
 	private String name;
 }

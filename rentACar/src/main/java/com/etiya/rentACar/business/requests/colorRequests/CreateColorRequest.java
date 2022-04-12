@@ -17,7 +17,7 @@ public class CreateColorRequest {
 	@JsonIgnore
 	private int id;
 	
-	//@NotNull
-	//@Length(min=2)
+	@NotNull
+	@Length(min=2)
 	private String name;
 }

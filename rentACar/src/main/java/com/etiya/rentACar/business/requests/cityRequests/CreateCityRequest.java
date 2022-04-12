@@ -14,8 +14,6 @@ public class CreateCityRequest {
 
 	@JsonIgnore
 	private int id;
-	
-	
 	private String name;
 	
 }

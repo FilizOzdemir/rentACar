@@ -38,6 +38,5 @@ public class CreateRentalRequest {
 	private int customerId;
 	
 	private double dailyPrice;
-	
-	private List<Integer> additionalPropertyId; //silinecek
+
 }

@@ -51,7 +51,7 @@ public class PaymentController {
 	 @GetMapping("/getall")
 	    public DataResult<List<ListPaymentDto>> getAll() {
 	        return this.paymentService.getAll();
-	    	//return rentalService.getAll();
+
 	    }
 }
 

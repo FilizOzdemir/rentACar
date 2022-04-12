@@ -14,8 +14,8 @@ public class InvoiceDto {
 	private int id;
 	private String invoiceNumber;//double mı olmalı?
 	private LocalDate createDate;//oluşturma tarihi
-	private LocalDate rentDate;//kira tarihi
-	private LocalDate returnDate;//iade tarihi
+	private LocalDate rentalRentDate;//kira tarihi
+	private LocalDate rentalReturnDate;//iade tarihi
 	private int totalRentDay;//kiralama günü
 	private double totalPrice;//toplam fiyat
 	private String customerFirstName;

@@ -13,6 +13,7 @@ public class UpdateCarStateRequest {  //araba durumu isteğini güncelle
 	
 
 	private int carId;
-
+	private int cityId;
+	private double kilometer;
 	private CarStates carStateName;
 }

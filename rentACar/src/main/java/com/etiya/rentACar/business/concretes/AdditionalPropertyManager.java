@@ -3,6 +3,7 @@ package com.etiya.rentACar.business.concretes;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.etiya.rentACar.business.responses.additionalPropertyResponses.AdditionalPropertyDto;
 import org.springframework.stereotype.Service;
 
 import com.etiya.rentACar.business.abstracts.AdditionalPropertyService;
@@ -52,7 +53,14 @@ public class AdditionalPropertyManager implements AdditionalPropertyService{
 		return new SuccessResult(BusinessMessages.AdditionalPropertyMessages.ADDITIONAL_PROPERTY_DELETED);
 	}
 
-	
+	@Override
+	public DataResult<AdditionalPropertyDto> getById(int id) {
+		AdditionalProperty additionalProperty=this.additionalPropertyDao.getById(id);
+		AdditionalPropertyDto response = this.modelMapperService.forDto().map(additionalProperty,AdditionalPropertyDto.class);
+		return  new SuccessDataResult<AdditionalPropertyDto>(response);
+	}
+
+
 	@Override
 	public DataResult<List<ListAdditionalPropertyDto>> getAll() {
 		List<AdditionalProperty> additionalProperties=this.additionalPropertyDao.findAll();

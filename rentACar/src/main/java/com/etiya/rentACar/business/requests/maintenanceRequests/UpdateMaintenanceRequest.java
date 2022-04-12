@@ -17,10 +17,10 @@ public class UpdateMaintenanceRequest {
 	
 	private int id;
 	
-	@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
+	//@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
 	private LocalDate dateAdded;//bakıma giris tarihi
 	
-	@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
+	//@FutureOrPresent //Gelecek tarih ya da şimdiki tarih olmalıdır.
 	private LocalDate dateReturned;//bakımdan çıkıs tarihi
 
 	@Length(min=1,max=100)

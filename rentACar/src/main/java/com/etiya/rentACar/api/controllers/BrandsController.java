@@ -48,6 +48,7 @@ public class BrandsController {
     }
 	@GetMapping("/getall")
 	public DataResult<List<ListBrandDto>> getAll() {
+
 		return this.brandService.getAll();
 	}
 

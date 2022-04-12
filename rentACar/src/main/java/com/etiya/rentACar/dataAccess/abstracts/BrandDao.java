@@ -9,8 +9,7 @@ import com.etiya.rentACar.entities.Brand;
 public interface BrandDao extends JpaRepository<Brand, Integer> {
 
 	//!!! IgnoreCase anahtar sözcüğü, sorgu eşleşmelerinin büyük/küçük harfe duyarlı olmamasını sağlar!!!
-	
-	
+
 	Boolean existsBrandByNameIgnoreCase(String name);
 	
 }

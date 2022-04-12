@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class AdditionalPropertyDto {
 
 	private int id;
-	private String name;//AdditionalPropertyname 
+	private String name;
 	private double dailyPrice;
 }

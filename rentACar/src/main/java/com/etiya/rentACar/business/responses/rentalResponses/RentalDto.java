@@ -32,5 +32,5 @@ public class RentalDto {
 	private double beforeRentKilometer;
 	private double afterRentKilometer;
 	
-	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperties;
+	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperty;
 }

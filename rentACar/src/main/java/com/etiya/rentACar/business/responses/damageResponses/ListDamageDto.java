@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class ListDamageDto {
 
 
-	private int id;//damage id
+	private int id;
 	private LocalDate accidentDate;//kaza tarihi
 	private String description;
 	private String carDescription;

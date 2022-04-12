@@ -10,8 +10,5 @@ import lombok.NoArgsConstructor;
 public class UpdatePaymentRequest {
 	
 	private int id;
-	private double totalPrice;
-
-	private int rentalId;
-	private int invoiceId;
+	private String paymentNumber;
 }

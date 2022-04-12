@@ -11,6 +11,6 @@ import com.etiya.rentACar.entities.City;
 public interface CityDao extends JpaRepository<City, Integer> {
 
 	City getById(int id);
-	//Boolean existsCityByNameIgnoreCase(String name);
-	List<City> getByNameIgnoreCase(String name);//bu kısıma bak!!!
+	Boolean existsCityByNameIgnoreCase(String name);
+	//List<City> getByNameIgnoreCase(String name);//bu kısıma bak!!!
 }

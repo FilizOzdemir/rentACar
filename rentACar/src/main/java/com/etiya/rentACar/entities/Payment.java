@@ -1,14 +1,7 @@
 package com.etiya.rentACar.entities;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,15 +18,24 @@ public class Payment {
 
 	@Column(name = "id") 
 	private int id;
-	
+
+	@Column(name="payment_number")
+	private String paymentNumber;
+
 	@Column(name="totalPrice")//toplam fiyat
 	private double totalPrice;
-	
+
+	@ManyToOne
+	@JoinColumn(name="customer_id",referencedColumnName = "id")
+	private Customer customer;
+
+	@OneToOne
+	@JoinColumn(name="invoice_id",referencedColumnName = "id")//bir faturanın bir ödemesi olur
+	private Invoice invoice;
+
 	@OneToOne
 	@JoinColumn(name="rental_id")//bire bir ilişki (bir kiralamanın bir ödemesi olur)
 	private Rental rental;
 	
-	@OneToOne
-	@JoinColumn(name="invoice_id")//bir faturanın bir ödemesi olur
-	private Invoice invoice;
+
 }

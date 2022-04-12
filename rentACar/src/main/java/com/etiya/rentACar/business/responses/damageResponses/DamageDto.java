@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DamageDto {
 
-	private int id;//damage id
-	private LocalDate accidentDate;
+	private int id;
+	private LocalDate accidentDate;//kaza tarihi
 	private String description;
 	private String carDescription;
 

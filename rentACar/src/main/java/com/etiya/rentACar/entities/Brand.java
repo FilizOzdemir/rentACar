@@ -29,7 +29,7 @@ public class Brand {
 	@Column(name = "id") // tablonun id alanı
 	private int id;
 
-	@Column(name = "name") // tablonun isim alanı
+	@Column(name = "name")
 	private String name;// marka ismi
 
 	@OneToMany(mappedBy = "brand") // bir'den çok / bir markanın bir çok arabası olabilir

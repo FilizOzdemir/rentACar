@@ -45,7 +45,7 @@ public class CarManager implements CarService {
 	@Override
 	public Result add(CreateCarRequest createCarRequest) {
 		
-		checkIfCarAvailable(createCarRequest.getId()); //BU KISMI SORRRR!!!
+		checkIfCarAvailable(createCarRequest.getId());
 		Car car = this.modelMapperService.forRequest().map(createCarRequest, Car.class);
 		this.carDao.save(car);
 		return new SuccessResult(BusinessMessages.CarMessages.CAR_ADDED);// araba eklendi
@@ -125,7 +125,7 @@ public class CarManager implements CarService {
 																										 
 			throw new BusinessException(BusinessMessages.CarMessages.CAR_NOT_AVAILABLE);// mevcut degil mesajı yazar
 		}
-		// BU KISMI CEM LERİN PAİRİNE SORRRR!!!!
+
 	}
 
 	@Override

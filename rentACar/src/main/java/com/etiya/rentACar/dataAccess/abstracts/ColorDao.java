@@ -9,9 +9,6 @@ public interface ColorDao extends JpaRepository<Color, Integer>{
 
 	//IgnoreCase anahtar sözcüğü, sorgu eşleşmelerinin büyük/küçük harfe duyarlı olmamasını sağlar!!!
 	//Bununla birlikte aynı ismi büyük yada kücük harfle iki kez girmemis olurum
-	
-	
+
 	Boolean existsColorByNameIgnoreCase(String name);
-	
-	
 }

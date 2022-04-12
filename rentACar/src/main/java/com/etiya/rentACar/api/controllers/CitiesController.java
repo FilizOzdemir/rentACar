@@ -49,6 +49,7 @@ public class CitiesController {
 	}
 	@GetMapping("/getall")
 	public DataResult<List<ListCityDto>> getAll() {
+
 		return this.cityService.getAll();
 	}
 }

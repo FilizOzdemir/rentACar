@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PaymentDto {
 
+	private String paymentNumber;
 	private String rentalCustomerCustomerFirstName;// bu kısıma bak!!!
 	private String rentalCustomerCustomerLastName;
 	private String invoiceInvoicesNumber;

@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeleteDamageRequest {
 	
-	private int id;
+	private int id;//damageId
 }

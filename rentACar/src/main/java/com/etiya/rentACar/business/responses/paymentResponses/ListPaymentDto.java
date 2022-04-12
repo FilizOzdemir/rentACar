@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ListPaymentDto {
 
+	private String paymentNumber;
 	private String rentalCustomerCustomerFirstName;// bu kısıma bak!!!
 	private String rentalCustomerCustomerLastName;
 	private String invoiceInvoicesNumber;
