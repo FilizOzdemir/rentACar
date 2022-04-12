@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CarDto {
 
+
 	private int id;
 	private double dailyPrice;
 	private String description;
