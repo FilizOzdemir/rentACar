@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "damages") // arabaya ait hasar tablosu
+@Table(name = "damages") // Arabaya ait Hasar Tablosu
 public class Damage {
 
 	@Id
@@ -34,7 +34,7 @@ public class Damage {
 	@Column(name = "description") // acıklama alanı
 	private String description;
 
-	@ManyToOne//(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "car_id")
 	private Car car;
 }

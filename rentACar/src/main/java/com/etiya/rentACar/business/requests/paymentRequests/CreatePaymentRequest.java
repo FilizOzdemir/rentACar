@@ -20,6 +20,7 @@ public class CreatePaymentRequest {
 	@JsonIgnore
 	private int id;
 	private String paymentNumber;
+    private int customerId;
     private CreateCreditCardRequest creditCard;
     private CreateRentalRequest createRentalRequest;
     private CreateInvoiceRequest createInvoiceRequest;

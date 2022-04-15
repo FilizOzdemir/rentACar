@@ -1,8 +1,14 @@
 package com.etiya.rentACar.business.requests.paymentRequests;
 
+import com.etiya.rentACar.business.requests.creditCardRequests.CreateCreditCardRequest;
+import com.etiya.rentACar.business.requests.invoiceRequests.CreateInvoiceRequest;
+import com.etiya.rentACar.business.requests.orderedAdditionalPropertyRequets.CreateOrderedAdditionalPropertyRequest;
+import com.etiya.rentACar.business.requests.rentalRequests.CreateRentalRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -11,4 +17,9 @@ public class UpdatePaymentRequest {
 	
 	private int id;
 	private String paymentNumber;
+	private int customerId;
+	private CreateCreditCardRequest creditCard;
+	private CreateRentalRequest createRentalRequest;
+	private CreateInvoiceRequest createInvoiceRequest;
+	private List<CreateOrderedAdditionalPropertyRequest> createOrderedAdditionalPropertyRequest;
 }

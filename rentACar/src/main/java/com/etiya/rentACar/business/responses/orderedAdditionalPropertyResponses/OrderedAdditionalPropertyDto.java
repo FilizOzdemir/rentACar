@@ -14,5 +14,5 @@ public class OrderedAdditionalPropertyDto {
 	private String rentalId;
 	private String additionalPropertyName;
 	private int additionalPropertyDailyPrice;
-	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperty;
+	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperty;//ek hızmetler kısmının içindekilerini getirir.
 }

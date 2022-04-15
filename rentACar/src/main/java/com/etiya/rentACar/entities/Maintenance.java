@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity //veri tab kaynagi
-@Table(name = "maintenances") // arabaya ait bakım tablosu
+@Table(name = "maintenances") // Arabaya ait Bakım Tablosu
 public class Maintenance {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ public class Maintenance {
 	@Column(name = "description") // aracın neden bakımda old aciklamasi
 	private String description;
 
-	@ManyToOne //(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "car_id")//carId
 	private Car car;
 

@@ -8,4 +8,7 @@ import org.springframework.stereotype.Service;
 public class CreditCardManager implements CreditCardService {
     private CreditCardDao creditCardDao;
 
+    public CreditCardManager(CreditCardDao creditCardDao) {
+        this.creditCardDao = creditCardDao;
+    }
 }

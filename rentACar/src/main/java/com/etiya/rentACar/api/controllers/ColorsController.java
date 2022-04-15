@@ -30,8 +30,8 @@ public class ColorsController {
 	}
 
 	@PostMapping("/add")
-	public void add(@RequestBody CreateColorRequest createColorRequest) {
-		this.colorService.add(createColorRequest);
+	public Result add(@RequestBody CreateColorRequest createColorRequest) {
+		return this.colorService.add(createColorRequest);
 	}
 
 	@PutMapping("/update")

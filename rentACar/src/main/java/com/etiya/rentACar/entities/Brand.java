@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "brands") // marka tablosu
+@Table(name = "brands") // Marka Tablosu
 public class Brand {
 
 	// GenerationType.IDENTITY: Veritabanı içindeki Auto Increment özelligini

@@ -39,7 +39,7 @@ public class InvoiceManager implements InvoiceService {
 	}
 
 	@Override
-	public Result add(CreateInvoiceRequest createInvoiceRequest) {
+	public DataResult<Invoice> add(CreateInvoiceRequest createInvoiceRequest) {
 		int rentalId=createInvoiceRequest.getRentalId();
 		RentalDto rentalDto=this.rentalService.getById(rentalId);
 		
@@ -49,11 +49,11 @@ public class InvoiceManager implements InvoiceService {
 		Invoice invoice= this.modelMapperService.forRequest().map(createInvoiceRequest, Invoice.class);
 		invoice.setRentDate(rentalDto.getRentDate());
 		invoice.setReturnDate(rentalDto.getReturnDate());
-		invoice.setTotalPrice(daysCount);
+		//invoice.setTotalPrice(daysCount);
 		invoice.setTotalRentDay(daysCount);
 		this.invoiceDao.save(invoice);
 		
-		return new SuccessResult(BusinessMessages.InvoiceMessages.INVOICE_ADDED);
+		return new SuccessDataResult<Invoice>(invoice,BusinessMessages.InvoiceMessages.INVOICE_ADDED);
 	}
 
 	@Override
@@ -76,6 +76,11 @@ public class InvoiceManager implements InvoiceService {
 		List<ListInvoiceDto> response = invoices.stream().map(invoice -> modelMapperService.forDto().map(invoice, ListInvoiceDto.class))
 				.collect(Collectors.toList());
 		return new SuccessDataResult<List<ListInvoiceDto>>(response);
+	}
+	@Override
+	public DataResult<Invoice> getById(int id){
+		Invoice invoice=this.invoiceDao.getById(id);
+		return new SuccessDataResult<Invoice>(invoice);
 	}
 
 	@Override

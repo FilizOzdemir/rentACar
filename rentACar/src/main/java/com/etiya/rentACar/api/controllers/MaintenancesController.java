@@ -4,13 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.etiya.rentACar.business.abstracts.MaintenanceService;
 import com.etiya.rentACar.business.requests.maintenanceRequests.CreateMaintenanceRequest;
@@ -31,13 +25,6 @@ public class MaintenancesController {
 		this.maintenanceService = maintenanceService;
 	}
 
-	@GetMapping("/getall")
-	public DataResult<List<ListMaintenanceDto>> getAll() {
-
-		return this.maintenanceService.getAll();
-	}
-
-	
 	@PostMapping("/add")
 	public Result add(@RequestBody @Valid CreateMaintenanceRequest createMaintenanceRequest) {
 
@@ -53,5 +40,14 @@ public class MaintenancesController {
 	@DeleteMapping("/delete")
 	public Result delete(@RequestBody @Valid DeleteMaintenanceRequest deleteMaintenanceRequest) {
 		return this.maintenanceService.delete(deleteMaintenanceRequest);
+	}
+	@GetMapping("/getall")
+	public DataResult<List<ListMaintenanceDto>> getAll() {
+
+		return this.maintenanceService.getAll();
+	}
+	@GetMapping("/getByCarId")
+	public DataResult<List<ListMaintenanceDto>> getByCarId(@RequestParam ("car") int id){
+		return this.maintenanceService.getAllMaintenanceByCarId(id);
 	}
 }

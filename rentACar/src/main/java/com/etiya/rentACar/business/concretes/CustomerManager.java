@@ -60,5 +60,10 @@ public class CustomerManager implements CustomerService{
         return new SuccessDataResult<List<ListCustomerDto>>(response);
 	}
 
+	@Override
+	public DataResult<Customer> getById(int customerId){
+		Customer customer= this.customerDao.getById(customerId);
+		return new SuccessDataResult<Customer>(customer);
+	}
 
 }

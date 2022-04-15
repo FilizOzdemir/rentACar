@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="rentals")//kira tablosu
+@Table(name="rentals")// Kira Tablosu
 @Entity
 public class Rental {
 

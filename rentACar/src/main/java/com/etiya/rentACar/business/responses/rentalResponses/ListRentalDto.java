@@ -32,5 +32,5 @@ public class ListRentalDto {
 	private double beforeRentKilometer;
 	private double afterRentKilometer;
 	
-	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperty;
+	private List<OrderedAdditionalPropertyDto> orderedAdditionalProperty;//ek hizmetler kısmının tümü
 }

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "cars") // araba tablosu
+@Table(name = "cars") // Arabaların Tablosu
 public class Car {
 
 	@Id
@@ -62,7 +62,7 @@ public class Car {
 	@JoinColumn(name="city_id")
 	private City city;
 	
-	@OneToMany(mappedBy = "car")
+	@OneToMany(mappedBy = "car")//bir araba bir çok kez kiralanabilir
 	private List<Rental> rentals;
 
 

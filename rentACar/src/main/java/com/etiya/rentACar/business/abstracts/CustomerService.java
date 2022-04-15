@@ -8,6 +8,7 @@ import com.etiya.rentACar.business.requests.customerRequests.UpdateCustomerReque
 import com.etiya.rentACar.business.responses.customerResponses.ListCustomerDto;
 import com.etiya.rentACar.core.utilities.results.DataResult;
 import com.etiya.rentACar.core.utilities.results.Result;
+import com.etiya.rentACar.entities.Customer;
 
 public interface CustomerService {
 
@@ -17,4 +18,5 @@ public interface CustomerService {
 
 	DataResult<List<ListCustomerDto>> getAll();
 
+	DataResult<Customer> getById(int customerId);
 }

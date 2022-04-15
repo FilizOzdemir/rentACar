@@ -14,9 +14,7 @@ import javax.validation.constraints.NotNull;
 public class UpdateColorRequest {
 
 	private int id;
-	
-	@NotNull
-	@Length(min=2)
+
 	private String name;
 
 	

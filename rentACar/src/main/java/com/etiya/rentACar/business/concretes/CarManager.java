@@ -44,8 +44,7 @@ public class CarManager implements CarService {
 
 	@Override
 	public Result add(CreateCarRequest createCarRequest) {
-		
-		checkIfCarAvailable(createCarRequest.getId());
+
 		Car car = this.modelMapperService.forRequest().map(createCarRequest, Car.class);
 		this.carDao.save(car);
 		return new SuccessResult(BusinessMessages.CarMessages.CAR_ADDED);// araba eklendi
@@ -117,19 +116,9 @@ public class CarManager implements CarService {
 		return new SuccessDataResult<List<ListCarDto>>(response);
 	}
 
-	@Override
-	public void checkIfCarAvailable(int id) {// aracın Mevcut Olup Olmadıgını Kontrol Etme
-
-		Car car = carDao.getById(id);
-		if (car.getCarState() == CarStates.UnderMaintenance || car.getCarState() == CarStates.Rented) {
-																										 
-			throw new BusinessException(BusinessMessages.CarMessages.CAR_NOT_AVAILABLE);// mevcut degil mesajı yazar
-		}
-
-	}
 
 	@Override
-	public Result updateCarState(UpdateCarStateRequest updateCarStateRequest) {
+	public void updateCarState(UpdateCarStateRequest updateCarStateRequest) {
 		int carId = updateCarStateRequest.getCarId();
 		Car car = this.carDao.getById(carId);
 		UpdateCarRequest response = modelMapperService.forRequest().map(car, UpdateCarRequest.class);
@@ -137,7 +126,7 @@ public class CarManager implements CarService {
 		response.setCarStateName(updateCarStateRequest.getCarStateName());
 		Car result = this.modelMapperService.forRequest().map(response, Car.class);
 		this.carDao.save(result);
-		return new SuccessResult(BusinessMessages.CarMessages.CAR_STATE_UPDATED);
+		//return new SuccessResult(BusinessMessages.CarMessages.CAR_STATE_UPDATED);
 	}
 
 	@Override

@@ -12,5 +12,5 @@ public interface CityDao extends JpaRepository<City, Integer> {
 
 	City getById(int id);
 	Boolean existsCityByNameIgnoreCase(String name);
-	//List<City> getByNameIgnoreCase(String name);//bu kısıma bak!!!
+	//List<City> getByNameIgnoreCase(String name);
 }

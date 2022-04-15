@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="customers")//müsteri tablosu
+@Table(name="customers")// Müsteri Tablosu
 @Entity
 public class Customer {
 
@@ -42,6 +42,6 @@ public class Customer {
     @OneToMany(mappedBy = "customer")//fatura tab ile ilişkilendirme
     private List<Invoice> invoices;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer")//ödeme tab ile ilişkilendirme
     private List<Payment> payments;
 }

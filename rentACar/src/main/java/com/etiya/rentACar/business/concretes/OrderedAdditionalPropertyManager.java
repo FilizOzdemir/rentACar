@@ -65,12 +65,21 @@ public class OrderedAdditionalPropertyManager implements OrderedAdditionalProper
 	}
 
 	@Override
+	public DataResult<List<ListOrderedAdditionalPropertyDto>> findAllByRentalId(int id) {
+		List<OrderedAdditionalProperty> results = this.orderedAdditionalPropertyDao.findAllByRentalId(id);
+		List<ListOrderedAdditionalPropertyDto> response = results.stream().map(orderedAdditionalProperty -> this.modelMapperService.forDto().map(orderedAdditionalProperty,ListOrderedAdditionalPropertyDto.class))
+				.collect(Collectors.toList());
+		return  new SuccessDataResult<List<ListOrderedAdditionalPropertyDto>>(response);
+	}
+
+	@Override
 	public void CreateOrderedAdditionalProperty(int rentalId, List<Integer> additionalPropertiesId) {
 		CreateOrderedAdditionalPropertyRequest createOrderedAdditionalPropertyRequest = new CreateOrderedAdditionalPropertyRequest();
 		for(int additionalPropertyId: additionalPropertiesId) {
 			createOrderedAdditionalPropertyRequest.setRentalId(rentalId);
 			createOrderedAdditionalPropertyRequest.setAdditionalPropertyId(additionalPropertyId);
 			this.add(createOrderedAdditionalPropertyRequest);
+
 		}	
 	}
 }

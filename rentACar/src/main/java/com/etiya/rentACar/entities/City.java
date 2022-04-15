@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "cities") // sehir tablosu
+@Table(name = "cities") // Sehir Tablosu
 public class City {
 
 	@Id
@@ -36,7 +36,7 @@ public class City {
 	@OneToMany(mappedBy = "returnCityId")
 	private List<Rental> returnCityRentals;
 	
-	@OneToMany(mappedBy = "city")//bir araba bir şehirde olabilir.
+	@OneToMany(mappedBy = "city")
 	private List<Car> cars;
 	
 	

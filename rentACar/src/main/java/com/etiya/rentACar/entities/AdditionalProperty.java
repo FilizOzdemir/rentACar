@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "additionalproperties") // ek hizmetler tablosu
+@Table(name = "additionalproperties") // Ek Hizmetler Tablosu
 public class AdditionalProperty {
 
 	@Id

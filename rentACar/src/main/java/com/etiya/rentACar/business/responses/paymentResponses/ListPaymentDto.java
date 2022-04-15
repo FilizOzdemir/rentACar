@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
 public class ListPaymentDto {
 
 	private String paymentNumber;
-	private String rentalCustomerCustomerFirstName;// bu kısıma bak!!!
-	private String rentalCustomerCustomerLastName;
-	private String invoiceInvoicesNumber;
+	private String rentalCustomerCustomerFirstName;//rentalda ki customer'ın customerda ki firstname'ini çeker!!!
+	private String rentalCustomerCustomerLastName;//rentalda ki customer'ın customerda ki lastname'ini çeker!!!
+	private String invoiceInvoicesNumber;//invoicede ki invoice number kısmını çeker!!!
 	private double totalPrice;
     private List<OrderedAdditionalPropertyDto> rentalAdditionalProperties;
 	

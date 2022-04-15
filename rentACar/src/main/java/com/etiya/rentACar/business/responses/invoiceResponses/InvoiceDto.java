@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class InvoiceDto {
 
 	private int id;
-	private String invoiceNumber;//double mı olmalı?
+	private String invoiceNumber;
 	private LocalDate createDate;//oluşturma tarihi
 	private LocalDate rentalRentDate;//kira tarihi
 	private LocalDate rentalReturnDate;//iade tarihi

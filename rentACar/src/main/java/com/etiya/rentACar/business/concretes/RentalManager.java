@@ -62,28 +62,20 @@ public class RentalManager implements RentalService {
 
 
 	@Override
-	public Result add(CreateRentalRequest createRentalRequest) {
+	public DataResult<Rental> add(CreateRentalRequest createRentalRequest) {
 		int carId = createRentalRequest.getCarId();
 	    checkIfCarState(carId);
 	    
 	    Rental result = this.modelMapperService.forRequest().map(createRentalRequest, Rental.class);
-	    this.rentalDao.save(result);
 	    
 	    CarDto car = this.carService.getById(carId);
 	    result.setBeforeRentKilometer(car.getKilometer());
 	    this.rentalDao.save(result);
-	    
-	    
-	    int rentalId = result.getId();
-	    List<Integer> additionalPropertiesId = createRentalRequest.getAdditionalPropertyId();
-	    orderedAdditionalPropertyService.CreateOrderedAdditionalProperty(rentalId,additionalPropertiesId);
-	    updateCarCity(carId, createRentalRequest.getReturnCityId());
-	    CarStates states=CarStates.Rented;
-	    updateCarState(carId, states);
-	    return new SuccessResult(BusinessMessages.RentalMessages.RENTAL_ADDED);
 
+		updateCarCity(carId,createRentalRequest.getReturnCityId());
+		updateCarState(carId,CarStates.Rented);
+		return new SuccessDataResult<Rental>(result,BusinessMessages.RentalMessages.RENTAL_ADDED);
 
-	   
 	}
 
 	@Override
@@ -107,22 +99,20 @@ public class RentalManager implements RentalService {
 	@Override
 	public Result returnRental(ReturnRentalRequest returnRentalRequest) {
 		checkIfRentalIdExists(returnRentalRequest.getId());
+
 		Rental result = this.rentalDao.getById(returnRentalRequest.getId());
 		result.setReturnDate(returnRentalRequest.getReturnDate());
 		result.setAfterRentKilometer(returnRentalRequest.getAfterRentKilometer());
 		this.rentalDao.save(result);
-		
-		//CarStates states = CarStates.Available;
-		int returnCityId = returnRentalRequest.getReturnCityId();
-		updateCarKilometer(returnRentalRequest);
+
 		
 		int carId = returnRentalRequest.getCarId();
-		updateCarCity(carId, returnCityId);
+		updateCarKilometer(carId, returnRentalRequest.getAfterRentKilometer());
+		updateCarCity(carId, returnRentalRequest.getReturnCityId());
 		updateCarState(carId,CarStates.Available);
 		
 		return new SuccessResult(BusinessMessages.RentalMessages.RENTAL_RETURNED);
 	}
-
 
 
 	@Override
@@ -132,13 +122,12 @@ public class RentalManager implements RentalService {
 		return rentalDto;
 	}
 
-	public void updateCarKilometer(ReturnRentalRequest returnRentalRequest) {
+	public void updateCarKilometer(int carId, double carKilometer) {
 		//kilometre güncellemesi
-		double startCarKilometer=returnRentalRequest.getAfterRentKilometer();
-		int carId = returnRentalRequest.getCarId();
+
 		UpdateKilometerRequest updateKilometerRequest=new UpdateKilometerRequest();
 		updateKilometerRequest.setId(carId);
-		updateKilometerRequest.setKilometer(startCarKilometer);
+		updateKilometerRequest.setKilometer(carKilometer);
 		this.carService.updateCarKilometer(updateKilometerRequest);
 	}
 	
@@ -176,13 +165,7 @@ public class RentalManager implements RentalService {
 			this.orderedAdditionalPropertyService.add(createOrderedAdditionalPropertyRequest);
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 }

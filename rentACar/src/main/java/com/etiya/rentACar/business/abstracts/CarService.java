@@ -37,15 +37,12 @@ public interface CarService {
 
 	Result delete(DeleteCarRequest deleteCarRequest);
 	
-	Result updateCarState(UpdateCarStateRequest updateCarStateRequest);// araba durumu isteğini güncelleme kısmını listeleme
-	
+	void updateCarState(UpdateCarStateRequest updateCarStateRequest);// araba durumu isteğini güncelleme kısmını listeleme
 	
 	void updateCarKilometer(UpdateKilometerRequest updateKilometerRequest);
 	
 	void updateCarCity(UpdateCarCityRequest updateCarCityRequest);
-	
-	//void updateCarStatusToAdd(int id);
-	void checkIfCarAvailable(int id);
+
 	
 
 }

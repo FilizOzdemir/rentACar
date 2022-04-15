@@ -94,6 +94,7 @@ public class BusinessMessages {
         	public static final String PAYMENT_DELETED="Ödeme Başarıyla Silindi !";
         	public static final String PAYMENT_UPDATED = "Ödeme Başarıyla Güncellendi !";
         	public static final String PAYMENT_ERROR = "Banka Ödeme İşlemini Onaylamadı !";
+            public static final String PAYMENT_CARD_IS_INVALID="Kar Geçersiz !";
         }
 	
 }

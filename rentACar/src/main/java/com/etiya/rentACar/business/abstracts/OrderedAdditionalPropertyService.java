@@ -16,6 +16,7 @@ public interface OrderedAdditionalPropertyService {
 	Result delete(DeleteOrderedAdditionalPropertyRequest deleteOrderedAdditionalPropertyRequest);
 	
 	DataResult<List<ListOrderedAdditionalPropertyDto>> getAll();
+	DataResult<List<ListOrderedAdditionalPropertyDto>> findAllByRentalId(int rentalId);
 	
 	void CreateOrderedAdditionalProperty(int rentalId, List<Integer> additionalPropertiesId);
 }

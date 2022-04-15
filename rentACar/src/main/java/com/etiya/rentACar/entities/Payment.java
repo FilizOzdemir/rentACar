@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name ="payments")//ödeme tablosu
+@Table(name ="payments")// Ödeme Tablosu
 public class Payment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

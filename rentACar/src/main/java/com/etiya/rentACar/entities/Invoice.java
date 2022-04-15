@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="invoices")//fatura tablosu
+@Table(name="invoices")// Fatura Tablosu
 @Entity
 public class Invoice {
 

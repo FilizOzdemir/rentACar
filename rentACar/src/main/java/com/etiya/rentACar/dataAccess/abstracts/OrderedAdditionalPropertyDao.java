@@ -10,5 +10,5 @@ import com.etiya.rentACar.entities.OrderedAdditionalProperty;
 @Repository
 public interface OrderedAdditionalPropertyDao extends JpaRepository<OrderedAdditionalProperty, Integer> {
 
-	List<OrderedAdditionalProperty> getByRentalId(int rentalId);
+	List<OrderedAdditionalProperty> findAllByRentalId(int rentalId);
 }

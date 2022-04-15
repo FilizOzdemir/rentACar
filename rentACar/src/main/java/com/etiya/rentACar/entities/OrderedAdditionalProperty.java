@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="ordered_additional_properties") // sipariş edilen Ek Özellikler tablosu
+@Table(name="ordered_additional_properties") // Sipariş Edilen Ek Özellikler tablosu
 public class OrderedAdditionalProperty{
 
 	@Id
@@ -31,6 +31,6 @@ public class OrderedAdditionalProperty{
 	private Rental rental;
 	
 	@ManyToOne
-	@JoinColumn(name="additional_property_id")//additionalService!
+	@JoinColumn(name="additional_property_id")
 	private AdditionalProperty additionalProperty;
 }

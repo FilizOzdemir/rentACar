@@ -10,12 +10,13 @@ import com.etiya.rentACar.business.responses.rentalResponses.ListRentalDto;
 import com.etiya.rentACar.business.responses.rentalResponses.RentalDto;
 import com.etiya.rentACar.core.utilities.results.DataResult;
 import com.etiya.rentACar.core.utilities.results.Result;
+import com.etiya.rentACar.entities.Rental;
 
 public interface RentalService {
 	
 	DataResult<List<ListRentalDto>> getAll();
 
-	Result add(CreateRentalRequest createRentalRequest);
+	DataResult<Rental> add(CreateRentalRequest createRentalRequest);
 
 	Result update(UpdateRentalRequest updateRentalRequest);
 

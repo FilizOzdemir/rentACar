@@ -2,7 +2,7 @@ package com.etiya.rentACar.entities;
 
 public enum CarStates {
 
-	//kiralanabilir olmaya uygun okup olmadıgı durumunun tablosu
+	//Arabanın kiralanabilir olmaya uygun olup olmadıgı durumunun tablosu
 	
 	Available, //mevcut
 	UnderMaintenance, //bakımda
