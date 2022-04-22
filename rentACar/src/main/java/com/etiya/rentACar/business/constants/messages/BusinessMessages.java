@@ -4,97 +4,97 @@ public class BusinessMessages {
 
 	public class MaintenanceMessages {
 		//BAKIM MESAJLARI
-		public static final String CAR_UNDERMAINTENANCE = "Bakıma Almak İstediğiniz Araç Zaten Şu Anda Bakımda !";
-		public static final String MAINTENANCE_ADDED = "Araç Bakım Ekleme İşlemi Başarıyla Gerçekleşti !";
-        public static final String MAINTENANCE_DELETED = "Araç Bakım Silme İşlemi Başarıyla Gerçekleşti !";
-        public static final String MAINTENANCE_UPDATED = "Araç Bakım Güncelleme İşlemi Başarıyla Gerçekleşti !";
+		public static final String CAR_UNDERMAINTENANCE = "CAR_UNDERMAINTENANCE";
+		public static final String MAINTENANCE_ADDED = "MAINTENANCE_ADDED";
+        public static final String MAINTENANCE_DELETED = "MAINTENANCE_DELETED";
+        public static final String MAINTENANCE_UPDATED = "MAINTENANCE_UPDATED";
 	}
         public class RentalMessages {
         	//KİRALAMA MESAJLARI
-            public static final String CAR_RENTED = "Bu Araç Kirada !";
-            public static final String CAR_NOT_AVAILABLE = " Araç Kiralanmak İçin Müsait Değil !";
-            public static final String RENTAL_RETURNED = "Kiralanan Araç Başarıyla Teslim Alınmıştır !";
-            public static final String RENTAL_ADDED = "Kiralama Başarıyla Eklenmiştir !";
-            public static final String RENTAL_DELETED = "Kiralama Kaydı Silinmiştir !";
-            public static final String RENTAL_UPDATED = "Kiralama Kaydı Güncellenmiştir !";
-            public static final String RENTAL_NOT_EXIST = "Böyle bir id ile daha önce bir kiralanma işlemi yoktur. Dolayısıyla teslim alınma söz konusu olamaz !";
+            public static final String CAR_RENTED = "CAR_RENTED";
+            public static final String CAR_NOT_AVAILABLE = "CAR_NOT_AVAILABLE";
+            public static final String RENTAL_RETURNED = "RENTAL_RETURNED";
+            public static final String RENTAL_ADDED = "RENTAL_ADDED";
+            public static final String RENTAL_DELETED = "RENTAL_DELETED";
+            public static final String RENTAL_UPDATED = "RENTAL_UPDATED";
+            public static final String RENTAL_NOT_EXIST = "RENTAL_NOT_EXIST";
         }
 
         public class CityMessages {
         	//ŞEHİR MESAJLARI
-            public static final String CITY_ADDED = "Şehir Eklendi !";
-            public static final String CITY_DELETED = "Şehir Silme İşlemi Başarıyla Gerçekleşmiştir !";
-            public static final String CITY_UPDATED = "Şehir Güncelleme İşlemi Başarıyla Gerçekleşmiştir !";
-            public static final String CITY_NAME_EXISTS = "Girdiğiniz Şehir Mevcuur !";
+            public static final String CITY_ADDED = "CITY_ADDED";
+            public static final String CITY_DELETED = "CITY_DELETED";
+            public static final String CITY_UPDATED = "CITY_UPDATED";
+            public static final String CITY_NAME_EXISTS = "CITY_NAME_EXISTS";
             
         }
 
         public class BrandMessages {
         	//MARKA MESAJLARI
-            public static final String BRAND_EXIST = " Girdiğiniz Marka Mevcuttur !";
-            public static final String BRAND_ADDED = "Marka Ekleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String BRAND_UPDATED = "Marka Güncelleme İşlemi Başarılya Gerçekleşti 1";
-            public static final String BRAND_DELETED = "Marka Başarıyla Silindi !";
+            public static final String BRAND_EXIST = "BRAND_EXIST";
+            public static final String BRAND_ADDED = "BRAND_ADDED";
+            public static final String BRAND_UPDATED = "BRAND_UPDATED";
+            public static final String BRAND_DELETED = "BRAND_DELETED";
         }
 
         public class ColorMessages {
         	//RENK MESAJLARI
-            public static final String COLOR_EXIST = " Girdiğiniz Renk Mevcuttur !";
-            public static final String COLOR_ADDED = "Renk Ekleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String COLOR_UPDATED = "Renk Güncelleme işlemi Başarıya Gerçekleşti !";
-            public static final String COLOR_DELETED = "Renk Silme İşlemi Başarıyla Gerçekleşti !";
+            public static final String COLOR_EXIST = "COLOR_EXIST";
+            public static final String COLOR_ADDED = "COLOR_ADDED";
+            public static final String COLOR_UPDATED = "COLOR_UPDATED";
+            public static final String COLOR_DELETED = "COLOR_DELETED";
         }
 
         public class AdditionalPropertyMessages {
         	//EK ÖZELLİK-HİZMET MESAJLARI
-            public static final String ADDITIONAL_PROPERTY_ADDED = "Ek Hizmetler Ekleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String ADDITIONAL_PROPERTY_DELETED = "Ek Hizmetler Başaryıla Silindi !";
-            public static final String ADDITIONAL_PROPERTY_UPDATED = "Ek Hizmelter Başarıyla Güncellendi !";
+            public static final String ADDITIONAL_PROPERTY_ADDED = "ADDITIONAL_PROPERTY_ADDED";
+            public static final String ADDITIONAL_PROPERTY_DELETED = "ADDITIONAL_PROPERTY_DELETED";
+            public static final String ADDITIONAL_PROPERTY_UPDATED = "ADDITIONAL_PROPERTY_UPDATED";
         }
 
         public class CarMessages {
         	//ARABA MESAJLARI
-            public static final String CAR_ADDED = "Başarıyla Eklendi !";
-            public static final String CAR_DELETED = "Başarıyla Silindi !";
-            public static final String CAR_UPDATED = "Başarıyla Güncellendi !";
-            public static final String CAR_NOT_AVAILABLE = "Böyle Bir Araba Mevcut Değil !";
-            public static final String CAR_STATE_UPDATED = "Araba Durumu Güncellemesi Başarıyla Gerçekleşti !";
+            public static final String CAR_ADDED = "CAR_ADDED";
+            public static final String CAR_DELETED = "CAR_DELETED";
+            public static final String CAR_UPDATED = "CAR_UPDATED";
+            public static final String CAR_NOT_AVAILABLE = "CAR_NOT_AVAILABLE";
+            public static final String CAR_STATE_UPDATED = "CAR_STATE_UPDATED";
         }
 
         public class CustomerMessages{
         	//MÜŞTERİ MESAJLARI
-            public static final String CUSTOMER_ADDED = " Müşteri Başarıyla Eklendi !";
-            public static final String CUSTOMER_UPDATED = "Müşteri Güncelleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String CUSTOMER_DELETED = "Müşteri Silme İşlemi Başarıyla Gerçekleşti !";
+            public static final String CUSTOMER_ADDED = " CUSTOMER_ADDED";
+            public static final String CUSTOMER_UPDATED = "CUSTOMER_UPDATED";
+            public static final String CUSTOMER_DELETED = "CUSTOMER_DELETED";
         }
 
         public class DamageMessages{
         	//HASAR MESAJLARI
-            public static final String DAMAGE_ADDED = "Hasar Ekleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String DAMAGE_UPDATED = "Hasar Güncelleme İşlemi Başarıyla Gerçekleşti !";
-            public static final String DAMAGE_DELETED = "Hasar Silme İşlemi Başarıyla Gerçekleşti !";
+            public static final String DAMAGE_ADDED = "DAMAGE_ADDED";
+            public static final String DAMAGE_UPDATED = "DAMAGE_UPDATED";
+            public static final String DAMAGE_DELETED = "DAMAGE_DELETED";
         }
 
         public class OrderedAdditionalPropertyMessages{
         	//EK ÖZELİK-HİZMET MESAJLARI
-            public static final String OREDERED_ADDITIONAL_PROPERTY_ADDED = "Ek Hizmetler Siparişi Başarıyla Eklendi !";
-            public static final String OREDERED_ADDITIONAL_PROPERTY_DELETED = "Ek Hizmetler Siparişi Başarıyla Silindi !";
-            public static final String OREDERED_ADDITIONAL_PROPERTY_UPDATED = "Ek Hizmetler Siparişi Başarıyla Güncellendi !";
+            public static final String OREDERED_ADDITIONAL_PROPERTY_ADDED = "OREDERED_ADDITIONAL_PROPERTY_ADDED";
+            public static final String OREDERED_ADDITIONAL_PROPERTY_DELETED = "OREDERED_ADDITIONAL_PROPERTY_DELETED";
+            public static final String OREDERED_ADDITIONAL_PROPERTY_UPDATED = "OREDERED_ADDITIONAL_PROPERTY_UPDATED";
         }
         public class InvoiceMessages{
         	//FATURA MESAJLARI
-            public static final String INVOICE_ADDED = "Fatura Başarıyla Eklendi !";
-            public static final String INVOICE_DELETED = "Fatura Başarıyla Silindi !";
-            public static final String INVOICE_UPDATED = "Fatura Başarıyla Güncellendi !";
+            public static final String INVOICE_ADDED = "INVOICE_ADDED";
+            public static final String INVOICE_DELETED = "INVOICE_DELETED";
+            public static final String INVOICE_UPDATED = "INVOICE_UPDATED";
         }
         
         public class PaymentMessages{
         	//ÖDEME MESAJLARI
-        	public static final String PAYMENT_ADDED ="Ödeme Başarıyla Eklendi !";
-        	public static final String PAYMENT_DELETED="Ödeme Başarıyla Silindi !";
-        	public static final String PAYMENT_UPDATED = "Ödeme Başarıyla Güncellendi !";
-        	public static final String PAYMENT_ERROR = "Banka Ödeme İşlemini Onaylamadı !";
-            public static final String PAYMENT_CARD_IS_INVALID="Kar Geçersiz !";
+        	public static final String PAYMENT_ADDED ="PAYMENT_ADDED";
+        	public static final String PAYMENT_DELETED="PAYMENT_DELETED";
+        	public static final String PAYMENT_UPDATED = "PAYMENT_UPDATED";
+        	public static final String PAYMENT_ERROR = "PAYMENT_ERROR";
+            public static final String PAYMENT_CARD_IS_INVALID="PAYMENT_CARD_IS_INVALID";
         }
 	
 }
